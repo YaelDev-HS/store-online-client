@@ -1,0 +1,21 @@
+<div class="flex items-center justify-between px-12 py-2 bg-gray-200">
+  <div class="font-medium text-blue-700 md:text-xl text-lg">
+    Store Name
+  </div>
+
+  <nav class="flex gap-2 items-center font-medium text-xs">
+    <a routerLinkActive="opacity-100" class="opacity-80" routerLink="/terms">Terms</a>
+    <a routerLinkActive="opacity-100" class="opacity-80" routerLink="/products">Products</a>
+    <a routerLinkActive="opacity-100" class="opacity-80" routerLink="/team">Team</a>
+    <a routerLinkActive="opacity-100" class="opacity-80" routerLink="/subscriptions">Subscriptions</a>
+  </nav>
+
+  <nav class="flex gap-2 items-center">
+    @if (isLogged()) {
+      <button>Feo</button>
+    }@else {
+      <a routerLink="/login" class="bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-5 py-2 rounded-full text-white font-medium">Sign in</a>
+      <a routerLink="/register" mat-stroked-button>Register</a>
+    }
+  </nav>
+</div>
